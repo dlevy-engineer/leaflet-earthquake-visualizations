@@ -46,8 +46,8 @@ function createFeatures(earthquakeData) {
                 radius: markerSize(feat.properties.mag),
                 color: c(feat.geometry.coordinates[2] / (cs_max / 10) ),
                 weight: 1,
-                opacity: 0.8,
-                fillOpacity: 0.5
+                opacity: 0.9,
+                fillOpacity: 0.7
             })
         }
         })
