@@ -20,6 +20,14 @@ The USGS is interested in building a new set of tools that will allow them to vi
     - Include popups that provide additional information about the earthquake when its associated marker is clicked.
     - Create a legend that will provide context for your map data.
 
+On initialization the map has the following appearance:
+
+![Map Appearance on Initialization](/Leaflet-Part-1/Images/map_initial.png)
+
+Zooming out indicates more severe and deeper seismic activity surrounding the map's initialization center on the West Coast of the U.S.:
+
+![Map Appearance on Initialization](/Leaflet-Part-1/Images/map_zoom_out.png)
+
 ### Part 2: Gather and Plot More Data
 Plot a second dataset on the map to illustrate the relationship between tectonic plates and seismic activity. This dataset should be pulled in and visualized alongside the original data from Part 1. Data on tectonic plates can be found at [https://github.com/fraxen/tectonicplates](https://github.com/fraxen/tectonicplates).
     - Plot the tectonic plates dataset on the map in addition to the earthquakes.
