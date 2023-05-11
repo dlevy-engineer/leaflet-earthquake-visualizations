@@ -100,18 +100,18 @@ function createMap(quakes) {
     // legend
     var legend = L.control({ position: "bottomleft" });
 
-    let q = cs_max / 4;
-    let h = cs_max / 2;
-    let tq = 3 * cs_max / 4;
+    let q = cs_max * 0.25;
+    let h = cs_max * 0.5;
+    let tq = cs_max * 0.75;
 
     legend.onAdd = function(map) {
         var div = L.DomUtil.create("div", "legend");
         div.innerHTML += "<h4>Earthquake Depth</h4>";
         div.innerHTML += "<h4>(m below sea level)</h4>";
-        div.innerHTML += `<i style="background: ${c(cs_min)}"></i><span>${cs_min} to ${q}</span><br>`;
-        div.innerHTML += `<i style="background: ${c(q)}"></i><span>${q} to ${h}</span><br>`;
-        div.innerHTML += `<i style="background: ${c(h)}"></i><span>${h} to ${tq}</span><br>`;
-        div.innerHTML += `<i style="background: ${c(tq)}"></i><span>${tq} to ${cs_max}</span><br>`;
+        div.innerHTML += `<i style="background: ${c(0)}"></i><span>${cs_min} to ${q}</span><br>`;
+        div.innerHTML += `<i style="background: ${c(0.25)}"></i><span>${q} to ${h}</span><br>`;
+        div.innerHTML += `<i style="background: ${c(0.5)}"></i><span>${h} to ${tq}</span><br>`;
+        div.innerHTML += `<i style="background: ${c(0.75)}"></i><span>${tq} to ${cs_max}</span><br>`;
         div.innerHTML += `<i style="background: ${c(cs_max)}"></i><span>${cs_max}+</span><br>`;
         
         return div;
