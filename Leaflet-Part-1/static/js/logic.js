@@ -24,7 +24,7 @@ function createFeatures(earthquakeData) {
 
     // we want to bind a popup with location information and time of occurrence to each quake marker
     function generatePopup(feature, layer) {
-        layer.bindPopup(`<h3>${feature.properties.place}</h3><h4>Magnitude: ${feature.properties.mag}</h4><hr><p>${new Date(feature.properties.time)}</p`);
+        layer.bindPopup(`<h3>${feature.properties.place}</h3><h4>Magnitude: ${feature.properties.mag}</h4><h5>Depth: ${feature.geometry.coordinates[2]} m</h5><hr><p>${new Date(feature.properties.time)}</p`);
     };
     
     let cs_array = [];
